@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block header %}SignUp{% endblock %}
+
+{% block section %}
+	<div class="row">
+		<div class="offset-lg-4 col-lg-4 offset-lg-4">
+			<div class="form-group">
+				<form method="post" action="{{ url_for("result") }}">
+					<label>Username:</label>
+					<input type="text" name="userid" placeholder="Username" class="form-control"/>
+					<label>Password:</label>
+					<input type="password" name="pass" placeholder="Enter Password" class="form-control" />
+					<label>Same Password:</label>
+					<input type="password" name="pass1" placeholder="Enter Password" class="form-control"/>
+					<label>emailid:</label>
+					<input type="email" name="email" placeholder="Email" class="form-control" />
+					<label>Gender:</label>
+					<div class="radio-inline">
+						<label><input type="radio" name="gender" value="Male" checked="checked"/>Male</label>
+						<label><input type="radio" name="gender" value="Female" />Female</label>
+						<label><input type="radio" name="gender" value="Other" />Other</label>
+					</div>
+					<label>Date of Birth:</label>
+					<input type="date" name="dob">
+					<div class="form-group">
+						<label for="state">State</label>
+						<select class="form-control" name="states" id="state" >
+							<option value="MH">Maharashtra</option>
+							<option value="BH">Bihar</option>
+							<option value="OR">Orissa</option>
+							<option value="PB">Punjab</option>
+						</select>
+					</div>
+					<div class="checkbox">
+						<label class="checkbox-inline"><input type="checkbox" name="member1" value="writer">Writer</label>
+						<label class="checkbox-inline"><input type="checkbox" name="member2" value="poet">Poet</label>
+						<label class="checkbox-inline"><input type="checkbox" name="member3" value="photo">Photographer</label>
+					</div>
+					<input type="submit" value="submit" class="btn btn-primary" />
+				</form>
+			</div>	
+		</div>
+	</div>
+{% endblock %}
+
+
+

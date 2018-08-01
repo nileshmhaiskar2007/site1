@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block header %}
+	Home
+{% endblock %}
+
+{% block style%}
+	 
+{% endblock %}
+
+{% block section %}
+	<div class="row">
+		<div class="col-lg-6">
+			{% for name in lon %}
+				{{ name }}&nbsp;&nbsp;
+			{% endfor %}
+			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <img src="static/images/giphy1.gif" alt="Flying Birds" />
+				    </div>
+				    <div class="carousel-item">
+				      <img src="static/images/flamingo960_720.jpg" alt="Flemingos" />
+				    </div>
+				    <div class="carousel-item">
+				      <img src="static/images/movingmice.gif" alt="movingmice" />
+				    </div>
+  			</div>
+			<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+			</a>
+			</div>	
+		</div>
+		<div class="col-lg-6">
+			{% for name in lon %}
+				{{ name }}&nbsp;&nbsp;
+			{% endfor %}
+			<img src="static/images/cafe960_720.jpg" alt="Cafe" width="100%" height="350px" />
+		</div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="jumbotron">
+				<h2>Critical Abstract</h2>
+				<p>
+					A critical abstract provides, in addition to describing main findings and information, a judgement or comment about the study’s validity, reliability, or completeness. The researcher evaluates the paper and often compares it with other works on the same subject. Critical abstracts are generally 400-500 words in length due to the additional interpretive commentary. These types of abstracts are used infrequently.
+				</p>
+				<a class="btn btn-primary" href="#" role="button">Read more</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

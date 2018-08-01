@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<title>
+		{% block header %}{% endblock %}
+		</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="static/css/style.css">
+		<link rel="stylesheet" href="static/bootstrap.min.css">
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12" id="myPage">
+					<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd";>
+						<a class="navbar-brand" href="#">
+							<img src="static/images/logo.png" width="30" height="30" alt="">
+						</a>
+						<div class="navbar navbar-collapse" id="navbarsupportedcontent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item active">
+									<a class="nav-link" href="{{ url_for("index") }}">&trade;Home<span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Article</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+										<a class="dropdown-item" href="#">Social</a>
+										<a class="dropdown-item" href="#">Economical</a>
+										<a class="dropdown-item" href="#">Cinema</a>
+										<a class="dropdown-item" href="#">TV</a>
+										<a class="dropdown-item" href="#">Political</a>
+										<a class="dropdown-item" href="#">Technical</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Poem</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+										<a class="dropdown-item" href="#">Children</a>
+										<a class="dropdown-item" href="#">Romantic</a>
+										<a class="dropdown-item" href="#">Fun</a>
+										<a class="dropdown-item" href="#">Shayari</a>
+										<a class="dropdown-item" href="#">Drama</a>
+										<a class="dropdown-item" href="#">Other</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pics</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+										<a class="dropdown-item" href="#">Nature</a>
+										<a class="dropdown-item" href="#">People</a>
+										<a class="dropdown-item" href="#">Fun</a>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{ url_for("member") }}">&reg;Members<span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{ url_for("contactus") }}">&copy;ContactUs<span class="sr-only">(current)</span></a>
+								</li>
+							</ul>
+						</div>
+						<form class="form-inline my-2 my-lg-0">
+							<a href="{{ url_for("member") }}" class="nav-link">LogIn
+							</a>&nbsp;&nbsp;
+							<a href="{{ url_for("signup") }}" class="nav-link">SignUp 
+							</a>&nbsp;&nbsp;
+							<input class="form-control mr-sm-2" type="search" placeholder="Search"aria-label="Search">
+							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
+							</button>
+						</form>
+					</nav>
+				</div>
+			</div>
+			<br />			
+			{% block section %}<!--section-->{% endblock %}
+			<br />
+			<div class="row">
+				<div class="col-lg-12">
+					<footer>
+						<div style="background-color:#e3f2fd;text-align:center;font-size:14px">
+							<a href="#myPage" title="To Top">
+    							<span class="nav-link">Go To Top</span>
+ 							</a>
+							<p>&copy; 2018 ndmhaiskar@gmail.com</p> 
+						</div>
+					</footer>
+					<!--<div style="background-color:#e3f2fd;text-align:center;font-size:14px">
+						 <p>&copy; 2018 ndmhaiskar@gmail.com</p> 
+					</div>-->
+				</div>
+			</div>
+		</div>
+		<script src="static/jquery-3.3.1.slim.min.js"></script>
+		<script src="static/popper.min.js"></script>
+		<script src="static/bootstrap.min.js"></script>
+	</body>
+</html>
